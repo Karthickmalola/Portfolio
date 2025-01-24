@@ -1,195 +1,314 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #84a6e9;
-        }
+  <title>Karthick A - Portfolio</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eef2f3;
+      color: #333;
+    }
 
-        header {
-            background-color: #941919;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-            position: relative; /* Add this */
-        }
+    /* Header Styling */
+    .header {
+      background: linear-gradient(to right, #007BFF, #6610f2);
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 30px;
+      font-weight: bold;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-        .header-content h1 {
-            font-size: 2.5rem;
-        }
+    /* Main Container */
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
 
-        /* Add styles for the round profile picture */
-        .profile-picture {
-            width: 100px; /* Adjust the size as needed */
-            height: 100px;
-            border-radius: 75%; /* Create a circular shape */
-            object-fit: cover; /* To ensure the image fills the circular area */
-            position: absolute; /* Add this */
-            top: 75px; /* Adjust top position as needed */
-            left: 75px; /* Adjust left position as needed */
-        }
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 95%;
+        padding: 20px;
+      }
+      table {
+        font-size: 14px;
+      }
+    }
 
-        nav {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-        }
+    @media screen and (max-width: 480px) {
+      .header {
+        font-size: 24px;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
+    /* Profile Picture */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 5px solid #007BFF;
+      transition: transform 0.3s;
+    }
 
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-        }
+    /* Table Styling */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        .section-content {
-            background-color: #fff;
-            padding: 2rem;
-            margin: 1rem;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: justify;
-        }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
 
-        .download-button {
-            background-color: #333;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-            align-self: center;
-        }
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
 
-        .download-button:hover {
-            background-color: #555;
-        }
+    tr:hover {
+      background-color: #f2f2f2;
+    }
 
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
-        }
+    /* Call-to-Action Button */
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      text-decoration: none;
+      color: white;
+      background: #007BFF;
+      padding: 14px 30px;
+      border-radius: 6px;
+      transition: 0.3s;
+      font-weight: bold;
+      font-size: 16px;
+    }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-    </style>
+    .btn:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Karthick A - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid #444;
+    }
+
+    .work-experience {
+      background: #f9f9f9;
+      border-left: 5px solid #007BFF;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+      text-align: left;
+    }
+
+    h2, h3 {
+      color: #007BFF;
+    }
+
+    p strong {
+      color: #222;
+    }
+
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: white;
+      background: #007BFF;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <!-- Add your profile picture here -->
-            <img src="./pic.jpg" alt="Your Profile Picture" class="profile-picture">
-            <h1>VIGNESH MS</h1>
-            <p>Am Electronics Engineer</p>
-        </div>
-    </header>
+  <div class="header">Karthick A - Portfolio</div>
+  
+  <div class="container">
+    <img src="C:\Users\PC\OneDrive\Desktop\karthick.jpg" alt="Profile Picture" class="profile-pic">
+    <p><strong>Faculty Engineer | Assistant Professor | System Programmer | Web Developer</strong></p>
+    <p>Experienced IT professional with expertise in programming, networking, and web development.</p>
+	<h1>Karthick A</h1>
+    <p>9370000608, 9789904352</p>
+    <p>karthickmalola@gmail.com</p>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-           
-        </ul>
-    </nav>
+    <p>Dedicated and enthusiastic Assistant Professor with 4.5 years of experience in Computer Science and Applications. Committed to fostering a stimulating learning environment, conducting cutting-edge research, and mentoring future professionals in the field.</p>
 
-    <section id="about">
-        <div class="section-content">
-            <h2>About Me</h2>
-            <p>I'm a <b>cyber security </b>expert and technology enthusiast who is passionate about helping organizations protect their data and create secure online environments. I'm driven by the desire to put technology to work for the greater good and empower individuals and businesses to benefit from the digital revolution. With over 7 years of experience in the field, I'm dedicated to staying up to date with the latest trends and innovations in the <a href="https://techtrainer20.github.io/git_con2/" traget="_target">cyber security </a> landscape. I'm also committed to helping others learn more about the importance of online security and how to stay safe online..</p>
-        </div>
-    </section>
+    <h2>Edifying Synopsis</h2>
 
-    <section id="education">
-        <div class="section-content">
-            <h2>Education</h2>
-            <p>Anna University  - EEE</p>
-            
-            
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="section-content">
-            <h2>Skills</h2>
-            <ul>
-                <li>CyberSecurity</li>
-                <li>Internet of Things</li>
-                <li>Cloud Computing</li>
-                <li>Python</li>
-                <li>IBM cloud</li>
-                <li>ML & AI</li>
-                <li>java</li>
-                <li>c++</li>
-                <li>Java script</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="section-content">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="#">AI Based alternator control system</a></li>
-                <li><a href="#">Cloud Security IBM</a></li>
-                <li><a href="#">IBM chetbot</a></li>
-                <li><a href="#">chetbot</a></li> 
-                <!-- Add more project links here -->
-            </ul>
-        </div>
-    </section>
-
-    <section id="resume">
+    <table>
+      <tr>
+        <th>Course/Specialization</th>
+        <th>Institute/college/school</th>
+        <th>Year of passing</th>
+        <th>Board/University</th>
+        <th>% of Marks/Grade</th>
+      </tr>
+      <tr>
+        <td>M.E.(CSE)</td>
+        <td>Karpaga Vinayaga College of Engineering and Technology</td>
+        <td>June 2018</td>
+        <td>Anna University</td>
+        <td>7.67 CGPA</td>
+      </tr>
+      <tr>
+        <td>B.E.(CSE)</td>
+        <td>Madras Institute of Technology, Chrompet, Chennai</td>
+        <td>May 2015</td>
+        <td>Anna University</td>
+        <td>7.06 CGPA</td>
+      </tr>
+      <tr>
+        <td>Diploma in Computer Engineering</td>
+        <td>Central Polytechnic college, Tharamani, Chennai</td>
+        <td>Apr 2009</td>
+        <td>DOTE</td>
+        <td>88%</td>
+      </tr>
+      <tr>
+        <td>HSC</td>
+        <td>Govt.H.S.School, Elapakkam</td>
+        <td>Mar 2006</td>
+        <td>State Board</td>
+        <td>70%</td>
+      </tr>
+      <tr>
+        <td>SSLC</td>
+        <td>Govt.H.S.School, Elapakkam</td>
+        <td>Apr 2004</td>
+        <td>State Board</td>
+        <td>88%</td>
+      </tr>
+    </table>
     
-        <div class="section-content">
-            <center>
-            <h2>Resume</h2>
-            <a href="./mycv.pdf" target="_blank" class="download-button">Download CV</a>
-        </center>
-        </div>
-        
-    </section>
+    <h2>Work Experience</h2>
 
-    <footer>
-        <p>&copy; 2023 VIGNESH M</p>
-    </footer>
+    <div class="work-experience">
+      <h3>Faculty Engineer - SRM INFOTECH COMPUTER EDUCATION</h3>
+      <p><strong>Duration:</strong> June 2009 - June 2010</p>
+      <ul>
+        <li>Teaching Experience in C, C++, and Oops concept.</li>
+        <li>Hardware and networking.</li>
+        <li>Web designing using HTML, ASP.Net.</li>
+      </ul>
+    </div>
 
-    <script>
-        // Smooth scrolling to section when clicking on navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+    <div class="work-experience">
+      <h3>System Programmer - SRI MALOLAN COLLEGE OF ARTS AND SCIENCE</h3>
+      <p><strong>Duration:</strong> May 2010 - May 2016</p>
+      <ul>
+        <li>Maintaining network infrastructure and administration.</li>
+        <li>Teaching programming languages (C, C++, Java, VB, Web Tech).</li>
+        <li>Maintaining and updating institute website.</li>
+      </ul>
+    </div>
 
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+    <div class="work-experience">
+      <h3>Assistant Professor - SRI MALOLAN COLLEGE OF ARTS AND SCIENCE</h3>
+      <p><strong>Duration:</strong> July 2019 - Present</p>
+      <ul>
+        <li>Conducting lectures and workshops on Computer Science topics.</li>
+        <li>Organized National Conference and published ISBN book.</li>
+        <li>Trainer for Photoshop, Hardware, and Networking.</li>
+      </ul>
+    </div>
 
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <div class="work-experience">
+      <h3>Web Designer & Developer - Sysgate Infosystems</h3>
+      <p><strong>Founder & CEO</strong></p>
+      <p><strong>Established:</strong> 2023 - Present</p>
+      <ul>
+        <li>Founded and currently running a web development company, Sysgate Infosystems.</li>
+        <li>Completed four web development projects for various clients.</li>
+        <li>Specializing in front-end and back-end web development, UI/UX design, and WordPress solutions.</li>
+        <li>Providing web hosting, maintenance, and SEO services.</li>
+      </ul>
+    </div>
+
+    <a href="https://sysgateinfosystems.com">View My Projects</a>
+  </div>
+  
 </body>
 </html>
